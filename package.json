@@ -1,0 +1,29 @@
+{
+  "name": "declarereq",
+  "version": "0.0.1",
+  "description": "Annotate functions with required properties, retrieved from this.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Rob-pw/DeclareReq.git"
+  },
+  "keywords": [
+    "annotate",
+    "js",
+    "functions",
+    "declare",
+    "required",
+    "properties",
+    "this",
+    "decorate"
+  ],
+  "author": "Rob-pw",
+  "license": "UNLICENCED",
+  "bugs": {
+    "url": "https://github.com/Rob-pw/DeclareReq/issues"
+  },
+  "homepage": "https://github.com/Rob-pw/DeclareReq#readme"
+}
