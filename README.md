@@ -28,8 +28,8 @@ use.js
   import * as functions from './module';
   
   const context = { 
-    $dependency1: "ichi", 
-    $dependency2: "ni"
+    [$dependency1]: "ichi", 
+    [$dependency2]: "ni"
   };
     
   const _myFunction = prepare.call(context, functions.myFunction);
