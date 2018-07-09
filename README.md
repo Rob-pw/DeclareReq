@@ -4,6 +4,7 @@ Annotate JS functions with required properties, retrieved from this. Super simpl
 Example:
 module.js
 ```javascript
+  // the $ prefix indicates a symbol reference.
   import { $required } from 'declarereq';
   import { $dependency1, $dependency2 } = './constants'; 
   
