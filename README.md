@@ -7,11 +7,16 @@ module.js
   import { $required } from 'declarereq';
   import { $dependency1, $dependency2 } = './constants'; 
   
-  myFunction[$required] = [$dependency1, $dependency2];
+  myFunction[$required] = [$dependency1, $dependency2]; //multiple named dependencies
   export function myFunction(param1) {
     const { $dependency1, $dependency2 } = this;
     
     console.log($dependency1, $dependency2);
+  }
+  
+  myFunction1[$req] = $dependency1; //single dependency; $req is an alias for $required
+  export function myFunction1() {
+    console.log(this); //this is the value associated with $dependency1 in the context;
   }
 ```
 
