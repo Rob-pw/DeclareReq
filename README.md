@@ -8,7 +8,7 @@ module.js
   import { $dependency1, $dependency2 } = './constants'; 
   
   myFunction[$required] = [$dependency1, $dependency2];
-  export myFunction(param1) {
+  export function myFunction(param1) {
     const { $dependency1, $dependency2 } = this;
     
     console.log($dependency1, $dependency2);
