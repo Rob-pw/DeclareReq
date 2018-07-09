@@ -1,9 +1,9 @@
 # DeclareReq
-Annotate JS functions with required properties, retrieved from this.
+Annotate JS functions with required properties, retrieved from this. Super simple dependency injection.
 
 Example:
 module.js
-`javascript
+```javascript
   import { $required } from 'declarereq';
   import { $dependency1, $dependency2 } = './constants'; 
   
@@ -13,9 +13,11 @@ module.js
     
     console.log($dependency1, $dependency2);
   }
-`
+```
+
 use.js
-`javascript
+```javascript
+  import { prepare } from 'declarereq';
   import { $dependency1, $dependency2 } = './constants'; 
   import { myFunction } from './module';
   
@@ -26,4 +28,4 @@ use.js
     
   const _myFunction = prepare.call(context, myFunction);
   _myFunction('param1');
-`
+```
