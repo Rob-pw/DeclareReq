@@ -38,6 +38,6 @@ use.js
   _myFunction1();
   
   const { myFunction, myFunction1 } = prepare.call(context, functions);
-  myFunction(); 
-  myFunction1('param1');
+  myFunction('param1'); 
+  myFunction1();
 ```
