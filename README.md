@@ -31,14 +31,21 @@ use.js
     [$dependency1]: "ichi", 
     [$dependency2]: "ni"
   };
-    
-  const _myFunction = prepare.call(context, functions.myFunction);
-  _myFunction('param1');
   
-  const _myFunction1 = prepare.call(context, functions.myFunction1);
-  _myFunction1();
+  (() => {
+    const myFunction = prepare.call(context, functions.myFunction);
+    myFunction('param1');
   
-  const { myFunction, myFunction1 } = prepare.call(context, functions);
-  myFunction('param1'); 
-  myFunction1();
+    const myFunction1 = prepare.call(context, functions.myFunction1);
+    myFunction1();
+  }());
+  
+  (() => {
+    const { myFunction, myFunction1 } = prepare.call(context, functions);
+    myFunction('param1'); 
+    myFunction1();
+  }());
+  
+  const boundPrepare = prepare.bind(context);
+  const { myFunction, myFunction1 } = boundPrepare(functions);
 ```
